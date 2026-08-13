@@ -1,0 +1,29 @@
+        INP
+        STA current
+        INP
+        STA step
+        INP
+        STA count
+
+loop    LDA count
+        BRZ end
+
+        LDA current
+        OUT
+
+        LDA current
+        ADD step
+        STA current
+
+        LDA count
+        SUB one
+        STA count
+
+        BRA loop
+
+end     HLT
+
+one     DAT 1
+current DAT 0
+step    DAT 0
+count   DAT 0
