@@ -1,0 +1,35 @@
+LOOP      INP
+          SUB MENOSUM
+          BRZ FIM
+
+          ADD MENOSUM
+          STA ELEMENTO
+          STA TESTE
+
+VERIFICA  LDA TESTE
+          BRZ PAR
+
+          SUB UM
+          BRZ IMPAR
+
+          LDA TESTE
+          SUB DOIS
+          STA TESTE
+          BRA VERIFICA
+
+PAR       LDA SOMA
+          ADD ELEMENTO
+          STA SOMA
+
+IMPAR     BRA LOOP
+
+FIM       LDA SOMA
+          OUT
+          HLT
+
+SOMA      DAT 0
+ELEMENTO  DAT 0
+TESTE     DAT 0
+UM        DAT 1
+DOIS      DAT 2
+MENOSUM   DAT -1
