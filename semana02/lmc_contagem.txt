@@ -1,1 +1,17 @@
+LOOP    INP
+        SUB MENOSUM
+        BRZ FIM
 
+        LDA CONT
+        ADD UM
+        STA CONT
+
+        BRA LOOP
+
+FIM     LDA CONT
+        OUT
+        HLT
+
+CONT     DAT 0
+UM       DAT 1
+MENOSUM  DAT -1
