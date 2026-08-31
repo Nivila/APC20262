@@ -19,7 +19,6 @@ Contar quantos números positivos e quantos negativos foram digitados numa séri
 
 fluxograma_contagem.jpg
 
- 
 
 ## Código
 
