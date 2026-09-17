@@ -39,7 +39,7 @@
 # Desafio b)
 
 ```javascript
-    //fill("white");
+    fill("white");
     strokeWeight(3);
     stroke("black");
     textSize(20);
