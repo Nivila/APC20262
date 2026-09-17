@@ -35,7 +35,7 @@
     text("in the" , 70, 100);
     fill(rgb(randomNumber(0,255), randomNumber(0,255), randomNumber(0,255)))
     text("sky...", 110, 150);
-    ```
+ ```
 # Desafio b)
 
 ```javascript
@@ -45,6 +45,7 @@
     textSize(20);
     text("Four score and seven years ago...", 30, 200);
 ```
+
 # Desafio c)
 
 ```javascript
