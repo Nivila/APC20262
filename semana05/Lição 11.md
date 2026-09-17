@@ -89,3 +89,41 @@ function draw() {
 }
 ```
 
+Comentário: Neste desafio foi desenvolvida a movimentação de um inseto controlado pelo teclado. Além do deslocamento, a rotação do sprite foi alterada para indicar visualmente a direção em que o personagem está se movendo.
+
+# Desafio c)
+
+```javascript
+var soccer = createSprite(200, 200);
+soccer.setAnimation("soccer");
+
+var ball = createSprite(200, 200);
+ball.setAnimation("ball");
+ball.scale = 0.1;
+
+function draw() {
+  background("soccer");
+
+  ball.rotation = randomNumber(0, 360);
+
+  if (keyDown("right")) {
+    ball.x = ball.x + 5;
+  }
+    
+  if (keyDown("left")) {
+    ball.x = ball.x - 5;
+  }
+    
+  if (keyDown("up")) {
+    ball.y = ball.y - 5;
+  }
+    
+  if (keyDown("down")) {
+    ball.y = ball.y + 5;
+  }
+
+  drawSprites();
+}
+```
+
+Comentário: Neste desafio foi criado um cenário de futebol no qual a bola pode ser movimentada pelo teclado. Também foi aplicada uma rotação aleatória contínua para simular movimento durante a partida.
