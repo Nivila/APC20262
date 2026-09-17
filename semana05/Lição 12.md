@@ -91,4 +91,61 @@ function draw() {
 }
 ```
 
-Comentário: Foi reforçada a utilização das coordenadas do mouse e da função `
+Comentário: Foi reforçada a utilização das coordenadas do mouse e da função `randomNumber()` para produzir movimentações dinâmicas do sprite.
+
+# Desafio d)
+
+```javascript
+var salt = createSprite(200, 200);
+salt.setAnimation("salt");
+salt.rotation = 150;
+
+function draw() {
+  background("skyblue");
+
+  // If mouseDidMove, rotate the salt shaker randomly to the left or right
+  if (mouseDidMove()) {
+    salt.rotation = randomNumber(130, 170);
+  }
+
+  drawSprites();
+}
+```
+
+Comentário: Neste desafio foi utilizada a função `mouseDidMove()` para detectar movimentações do mouse. Sempre que o cursor é movido, o saleiro recebe uma rotação aleatória, simulando uma ação de chacoalhar.
+
+# Desafio e)
+
+```javascript
+var balloon = createSprite(200, 300);
+balloon.setAnimation("balloon");
+balloon.scale = 0.5;
+
+function draw() {
+  background("lightblue");
+
+  fill("lightgreen");
+  rect(0, 350, 400, 50);
+
+  fill("purple");
+  textSize(30);
+  text("Happy Badey!", 85, 70);
+
+  fill("black");
+  textSize(18);
+  text("meus parabens!", 120, 110);
+
+  if (mouseDown()) {
+    balloon.y = balloon.y - 2;
+  }
+
+  if (balloon.y < 100) {
+    balloon.y = 300;
+  }
+
+  drawSprites();
+}
+```
+
+Comentário: Neste desafio foi criada uma animação interativa de aniversário. O balão sobe quando o botão do mouse é pressionado e retorna à posição inicial ao atingir determinada altura, criando um ciclo contínuo.
+
