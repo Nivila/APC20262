@@ -1,7 +1,7 @@
 # Avaliação
 
 ```javascript
-var coin = createSprite(200,10);
+var coin = createSprite(200,10); 
 coin.setAnimation("coin_gold_1");
 setCoin();
 
